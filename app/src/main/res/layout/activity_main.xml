@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:openDrawer="start"
+    tools:context=".MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                layout="@layout/app_bar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp">
+
+
+            <!-- Gender Selection -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="10dp">
+
+                <!-- Male Option -->
+                <LinearLayout
+                    android:id="@+id/layoutMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@color/layout_unselected_gender_BG">
+
+                    <ImageView
+                        android:id="@+id/imgMale"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/male_pic" />
+
+                    <TextView
+                        android:id="@+id/tvMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/textview_male"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Female Option -->
+                <LinearLayout
+                    android:id="@+id/layoutFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@color/layout_unselected_gender_BG">
+
+                    <ImageView
+                        android:id="@+id/imgFemale"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/female_pic" />
+
+                    <TextView
+                        android:id="@+id/tvFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textview_female"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/layout_height_BG">
+                <!-- Height Selector -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textview_height"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textview_heightCM"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Age and Weight Controls -->
+                <SeekBar
+                    android:id="@+id/seekBarHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:max="245"
+                    android:progress="180" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <!-- Age Control -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/layout_age_bg"
+                    android:layout_marginEnd="5dp">
+
+
+                    <TextView
+                        android:id="@+id/tvAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textview_age_num"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnDecreaseAge"
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:text="@string/btn_decrease_age"
+                            android:textSize="25sp"
+                            android:background="@color/btn_increment_decrement"
+                            android:layout_margin="5dp"/>
+
+                        <Button
+                            android:id="@+id/btnIncreaseAge"
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:text="@string/btn_increase_age"
+                            android:textSize="25sp"
+                            android:background="@color/btn_increment_decrement"
+                            android:layout_margin="5dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textview_age"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"/>
+
+                </LinearLayout>
+
+                <!-- Weight Control -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/layout_weight_bg"
+                    android:layout_marginStart="5dp">
+
+
+                    <TextView
+                        android:id="@+id/tvWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textview_weight_num"
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnDecreaseWeight"
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:text="@string/btn_decrease_weight"
+                            android:textSize="25sp"
+                            android:background="@color/btn_increment_decrement"
+                            android:layout_margin="5dp"/>
+
+
+                        <Button
+                            android:id="@+id/btnIncreaseWeight"
+                            android:layout_width="70dp"
+                            android:layout_height="50dp"
+                            android:text="@string/btn_increase_weight"
+                            android:textSize="25sp"
+                            android:background="@color/btn_increment_decrement"
+                            android:layout_margin="5dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textview_weight"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Calculate Button -->
+            <Button
+                android:id="@+id/btnCalculateBMI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/btn_calculate_bmi"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:background="@drawable/button"
+                android:padding="15dp"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:id="@+id/navigationView"
+        app:headerLayout="@layout/header_drawer_nav"
+        app:menu="@menu/drawer_nav_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

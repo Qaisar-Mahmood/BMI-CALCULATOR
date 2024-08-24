@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">BMI CALCULATOR</string>
+    <string name="textview_male">Male</string>
+    <string name="textview_female">Female</string>
+    <string name="textview_height">HEIGHT</string>
+    <string name="textview_heightCM">180 cm</string>
+    <string name="textview_age_num">19</string>
+    <string name="btn_decrease_age">-</string>
+    <string name="btn_increase_age">+</string>
+    <string name="textview_age">Age</string>
+    <string name="textview_weight_num">74</string>
+    <string name="btn_decrease_weight">-</string>
+    <string name="btn_increase_weight">+</string>
+    <string name="textview_weight">Weight</string>
+    <string name="btn_calculate_bmi">CALCULATE BMI</string>
+    <string name="tvResultTitle">Your Result</string>
+    <string name="tvBMICategory">Overweight</string>
+    <string name="tvBMIValue">28.1</string>
+    <string name="btnSaveResult">Save Result</string>
+    <string name="tvAdviceTitle">Advice:</string>
+    <string name="tvAdviceText">The best way to lose weight if you are overweight is through a combination of diet and exercise.</string>
+    <string name="btnRecalculateBMI">RE-CALCULATE YOUR BMI</string>
+    <string name="btnClearAll">Clear All</string>
+    <string name="OpenDrawer">Open Navigation Drawer</string>
+    <string name="CloseDrawer">Close Navigation Drawer</string>
+    <string name="tvDateTime">2022–03–06 - 24:16</string>
+    <string name="opt_home">Home</string>
+    <string name="opt_history">History</string>
+</resources>
